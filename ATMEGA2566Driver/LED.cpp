@@ -223,4 +223,10 @@ void operator1::StrobeRainbow() {
   delay(100);
 }
 
+void operator1::smoke(int delaynum) {
+  digitalWrite(smokePin, HIGH);
+  delay(delaynum);
+  digitalWrite(smokePin, LOW);
+  delay(delaynum*10);
+}
 operator1 led = operator1(); //for compiling

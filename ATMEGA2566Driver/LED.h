@@ -15,6 +15,7 @@ class operator1
   void lasermode_4();
   void walking(); //not tested
   void StrobeRainbow(); //not tested
+  void smoke(int dly); //set smoke machine relay with delay interval
   int value(); //local var
 };
 

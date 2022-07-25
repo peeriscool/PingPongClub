@@ -70,27 +70,27 @@ void setup(void){
   
   server.on("/LedON", [](){
     server.send(200, "text/html", webPage);
-    digitalWrite(led_pin, HIGH);
+   // digitalWrite(led_pin, HIGH);
     Serial.println("[ON]");
     delay(1000);
   });
   
   server.on("/LedOFF", [](){
     server.send(200, "text/html", webPage);
-    digitalWrite(led_pin, LOW);
+  //  digitalWrite(led_pin, LOW);
     Serial.println("[OFF]");
     delay(1000);
   });
      server.on("/SmokeON", [](){
     server.send(200, "text/html", webPage);
-    digitalWrite(led_pin2, HIGH);
+  //  digitalWrite(led_pin2, HIGH);
     Serial.println("[SMOKEON]");
     delay(1000);
   });
   
     server.on("/SmokeOFF", [](){
     server.send(200, "text/html", webPage);
-    digitalWrite(led_pin2, LOW);
+  //  digitalWrite(led_pin2, LOW);
     Serial.println("[SMOKEOFF]");
     delay(1000);
   });

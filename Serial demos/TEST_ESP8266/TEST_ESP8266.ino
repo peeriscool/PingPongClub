@@ -3,9 +3,10 @@
 #include <ESP8266WebServer.h>
 #include <ESP8266mDNS.h>
      
-// ใส่ชื่อพาสเวิดไฟไวของเรา
-const char* ssid = "Aars";
-const char* password = "aroniscool";
+
+//Enter our WiFi password.
+const char* ssid = "Erica terpstra'$ hotspot";
+const char* password = "Roomig23";
 
 ESP8266WebServer server(80);
 MDNSResponder mdns;
@@ -15,7 +16,7 @@ String webPage = "";
 int led_pin = 51;
      
 void setup(void){
-     
+     Serial.println("Serial3 start");
   // подготовка:
   pinMode(led_pin, OUTPUT);
   digitalWrite(led_pin, LOW);

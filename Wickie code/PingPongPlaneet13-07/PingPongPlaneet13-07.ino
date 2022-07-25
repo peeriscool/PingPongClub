@@ -69,7 +69,7 @@ void setup() {
 String readstring;
 void loop() {
   // put your main code here, to run repeatedly:
-  if(Serial.available()){
+  /*if(Serial.available()){
     int i = Serial.read();
     Serial.print(" I recieved:");
     Serial.println(i);
@@ -96,6 +96,8 @@ void loop() {
     }
  }
  //Serial.println("klaarmetpoepenineenouweschoen");
+*/
+
 
 }
 

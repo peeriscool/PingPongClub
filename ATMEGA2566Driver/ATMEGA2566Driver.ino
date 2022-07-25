@@ -1,22 +1,30 @@
-
+//#include <MemoryFree.h>
 #include <EEPROM.h>
 
-#define PIN_LED 51 //button
-#define PIN_trigger 50 //button 2
+#define PIN_LED 13    // вывод светодиода
+#define led_pin2 53
 String inString;
+
+// Настройка
 void setup() {
-  
+  // Инициализация портов и выходов
   Serial.begin(115200);
   Serial3.begin(115200);
   pinMode(PIN_LED, OUTPUT);
-  digitalWrite(PIN_LED, LOW);  Serial.print("atmega esp connection");
+  pinMode(51,OUTPUT);
+  digitalWrite(PIN_LED, LOW);
+   digitalWrite(51, LOW);
+    Serial.print("ATMEGA2566 Setup");
 }
+
+// Выполнение
 void loop() {
-  
 }
+
+// Проверка события на порту Serial3
 void serialEvent3() {
   while (Serial3.available()) {
-
+    // Чтение данных из порта Serial3
     char inChar = Serial3.read();
     // Вывод прочитанных данных в порт Serial
     Serial.write(inChar);
@@ -29,6 +37,12 @@ void serialEvent3() {
       else if (inString.indexOf("[OFF]")>0) {
         digitalWrite(PIN_LED, LOW);
       }
+        if (inString.indexOf("[SMOKEON]")>0) {
+        digitalWrite(led_pin2, HIGH);
+        }
+        else if (inString.indexOf("[SMOKEOFF]")>0) {
+        digitalWrite(led_pin2, LOW);
+        } 
       else
       {
         Serial.println("Wrong command");

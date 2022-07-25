@@ -66,7 +66,7 @@ void setup() {
  //while (esp8266.begin())
  Serial.println("poepenineenouweschoen");
 }
-String readstring;
+
 void loop() {
   // put your main code here, to run repeatedly:
   /*if(Serial.available()){

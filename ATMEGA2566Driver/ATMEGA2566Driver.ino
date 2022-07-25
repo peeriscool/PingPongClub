@@ -1,5 +1,6 @@
 //#include <MemoryFree.h>
 #include <EEPROM.h>
+#include "LED.h"
 
 #define PIN_LED 13    // вывод светодиода
 #define led_pin2 53
@@ -15,10 +16,17 @@ void setup() {
   digitalWrite(PIN_LED, LOW);
    digitalWrite(51, LOW);
     Serial.print("ATMEGA2566 Setup");
+LED.SETUP();
 }
 
 // Выполнение
 void loop() {
+ // LED.lasermode_1(100,22,44); //delay , startpin, stoppin //loop through
+ //LED.lasermode_2(500); //delay on off based on groups
+ // LED.lasermode_3(50); //delay on off based on Random
+// LED.lasermode_4(); //off command
+//LED.walking(); 
+//LED.StrobeRainbow();
 }
 
 // Проверка события на порту Serial3
